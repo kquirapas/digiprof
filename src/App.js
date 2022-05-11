@@ -1,9 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+
+import Navbar from './Navbar';
+import Palette from './Palette';
 
 function App() {
   return (
-		<div>hotdog</div>
+		<div>
+			<Navbar />
+			<main className="flex justify-center items-center">
+				<Palette />
+			</main>
+		</div>
 	);
 }
 
