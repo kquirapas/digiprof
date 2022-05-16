@@ -1,14 +1,14 @@
 import './App.css';
+import './firebase';
 
 import Navbar from './Navbar';
-import Palette from './Palette';
+import Canvas from './Canvas';
 
 function App() {
   return (
 		<div>
-			<Navbar />
-			<main className="flex justify-center items-center">
-				<Palette />
+			<main className="">
+				<Canvas />
 			</main>
 		</div>
 	);

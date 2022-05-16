@@ -4,12 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { Helmet } from 'react-helmet';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+		<Helmet>
+		<title>DigiProf</title>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+		</Helmet>
 		<BrowserRouter>
 			<Routes>
 				<Route exact path="/" element={<Home />} />
