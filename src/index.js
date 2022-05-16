@@ -12,8 +12,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 		<Helmet>
-		<title>DigiProf</title>
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+			<title>DigiProf</title>
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 		</Helmet>
 		<BrowserRouter>
 			<Routes>

@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useRef } from 'react';
 
 import Toolbar from './Toolbar';
 
@@ -20,7 +20,7 @@ export default function Canvas() {
 
 			const posX = e.touches[0].screenX;
 			const posY = e.touches[0].screenY;
-			console.log(e, posX, posY);
+			// console.log(e, posX, posY);
 
 			const ctx = canvasRef.current.getContext("2d");
 			ctx.fillStyle = "#000000";
