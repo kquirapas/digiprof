@@ -1,7 +1,6 @@
 import './App.css';
 import './firebase';
 
-import Navbar from './Navbar';
 import Canvas from './Canvas';
 
 function App() {
