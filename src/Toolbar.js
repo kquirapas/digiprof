@@ -4,6 +4,7 @@ export default function Toolbar({ canvasId }) {
 	useEffect(() => {
 		// mounting
 		clear();
+
 	}, []);
 
 	const save = async (e) => {
