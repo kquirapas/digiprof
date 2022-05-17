@@ -3,12 +3,14 @@ import { useRef } from 'react';
 import Toolbar from './Toolbar';
 
 const CANVASID = "canvas";
-const BRUSHSIZE = 20;
-
+const CANVASWIDTH = 28;
+const BRUSHSIZE = 1;
 
 // viewport
 const VW = window.innerWidth;
 const VH = window.innerHeight;
+
+const scale = CANVASWIDTH / VW;
 
 export default function Canvas() {
 	const canvasRef = useRef(null);
@@ -18,9 +20,9 @@ export default function Canvas() {
 	const draw = (e) => {
 		if (e) {
 
-			const posX = e.touches[0].screenX;
-			const posY = e.touches[0].screenY;
-			// console.log(e, posX, posY);
+			const posX = e.touches[0].screenX * scale;
+			const posY = e.touches[0].screenY * scale;
+			console.log(posX, posY);
 
 			const ctx = canvasRef.current.getContext("2d");
 			ctx.fillStyle = "#000000";
@@ -35,9 +37,11 @@ export default function Canvas() {
 	};
 
 	return (
-		<div>
-			<canvas width={VW} height={VH} ref={canvasRef} onTouchMove={draw} id={CANVASID} className="bg-white" />
+		<>
+			<div className="h-screen">
+				<canvas width={CANVASWIDTH} height={CANVASWIDTH} ref={canvasRef} onTouchMove={draw} id={CANVASID} className="w-screen h-auto bg-white" />
+			</div>
 			<Toolbar canvasId={CANVASID} />
-		</div>
+		</>
 	);
 }
